@@ -23,26 +23,25 @@
         moveTo(함수)                           현재 위치를 지정된 위치로 이동 
   
   */
-
-function list() {
+function List() {
     this.listSize = 0;
     this.pos = 0;
     this.dataStore = []; // 리스트 요소를 저장할 빈 배열 초기화
-    this.clear = clear;
-    this.find = find;
+    // this.clear = clear;
+    // this.find = find;
     this.toString = toString;
-    this.insert = insert;
+    // this.insert = insert;
     this.append = append;
     this.remove = remove;
-    this.front = front;
-    this.end = end;
-    this.prev = prev;
-    this.next = next;
+    // this.front = front;
+    // this.end = end;
+    // this.prev = prev;
+    // this.next = next;
     this.length = length;
-    this.currPos = currPos;
-    this.moveTo = moveTo;
-    this.getElment = getElement;
-    this.contains = contains;
+    // this.currPos = currPos;
+    // this.moveTo = moveTo;
+    // this.getElment = getElement;
+    // this.contains = contains;
 }
 
 
@@ -70,12 +69,18 @@ function remove(element) {
     return false;
 }
 
+//3.2.4 Length 리스트 요소 개수 
+function length() {
+    return this.listSize;
+}
 
-var list = list();
-console.log(  list.listSize );
+//3.2.5 toString 리스트 요소 확인 
+function toString(){
+    return this.dataStore;
+}
 
 
-
-
-
+var names = new List();
+names.append("Jay");
+console.log(names.toString());
 
