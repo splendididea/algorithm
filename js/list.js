@@ -28,7 +28,7 @@ function List() {
     this.pos = 0;
     this.dataStore = []; // 리스트 요소를 저장할 빈 배열 초기화
     // this.clear = clear;
-    // this.find = find;
+    this.find = find;
     this.toString = toString;
     // this.insert = insert;
     this.append = append;
@@ -82,5 +82,7 @@ function toString(){
 
 var names = new List();
 names.append("Jay");
+names.append('Mike');
+names.remove('Mike');
 console.log(names.toString());
 
