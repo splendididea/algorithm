@@ -27,7 +27,7 @@ function List() {
     this.listSize = 0;
     this.pos = 0;
     this.dataStore = []; // 리스트 요소를 저장할 빈 배열 초기화
-    // this.clear = clear;
+    this.clear = clear;
     this.find = find;
     this.toString = toString;
     // this.insert = insert;
@@ -41,7 +41,7 @@ function List() {
     // this.currPos = currPos;
     // this.moveTo = moveTo;
     // this.getElment = getElement;
-    // this.contains = contains;
+    this.contains = contains;
 }
 
 
@@ -79,6 +79,24 @@ function toString(){
     return this.dataStore;
 }
 
+//3.2.6 Insert 
+function insert(element, after) {
+    var insertPos = find(after);
+    if (insertPos > -1) {
+        this.dataStore.splice(insertPos + 1, 0 , element);
+        ++this.listSize;
+        return true;
+    }   
+    return false;
+}
+
+// 3.2.7 
+function clear() {
+    // delete this.dataStore;
+    this.dataStore = [];
+    this.dataStore.length = 0;
+    this.listSize = this.pos = 0;
+}
 
 var names = new List();
 names.append("Jay");
@@ -86,3 +104,17 @@ names.append('Mike');
 names.remove('Mike');
 console.log(names.toString());
 
+names.clear();
+console.log(names.toString());
+names.append("MIKA");
+// 3.2.8 Contains 리스트에 특정값이 있는지 판단 
+function contains ( element ) {
+    for( var i=0; i<this.dataStore.length;i++ ){
+        if( this.dataStore[i] == element ) {
+            return true;
+        } 
+    }
+    return false;
+}
+
+console.log( names.contains("MIKA") );
