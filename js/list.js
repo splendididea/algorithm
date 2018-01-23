@@ -33,14 +33,14 @@ function List() {
     // this.insert = insert;
     this.append = append;
     this.remove = remove;
-    // this.front = front;
-    // this.end = end;
+    this.front = front;
+    this.end = end;
     // this.prev = prev;
     // this.next = next;
     this.length = length;
     // this.currPos = currPos;
     // this.moveTo = moveTo;
-    // this.getElment = getElement;
+    this.getElement = getElement;
     this.contains = contains;
 }
 
@@ -118,3 +118,37 @@ function contains ( element ) {
 }
 
 console.log( names.contains("MIKA") );
+
+// 3.2.9 리스트 탐색 
+function front() {
+    this.pos = 0;
+}
+
+function end() {
+    this.pos = this.listSize  -1;
+}
+
+function prev() {
+    if( this.pos > 0 ){
+        --this.pos;
+    }
+}
+
+function next() {
+    
+}
+
+function getElement() {
+    return this.dataStore[this.pos];
+}
+
+
+
+var names2 = new List();
+names2.append('MIKE');
+names2.append('TALES');
+
+names2.front();
+
+console.log(names.getElement());
+

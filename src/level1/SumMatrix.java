@@ -7,6 +7,8 @@ class SumMatrix {
     for( int i=0;i<aX;i++ ){
     	for(int j=0;j<A[i].length;j++ ) {
         System.out.println( A[i][j] + B[i][j] );
+        System.out.println( A[i][j] + B[i][j] );
+        System.out.println( A[i][j] + B[i][j] );
         System.out.println("A i" + i + ", j = " +j+ ", val" + A[i][j]);
         System.out.println("B i" + i + ", j = " +j+ ", val" + B[i][j]);
         answer[i][j] = A[i][j] + B[i][j];
