@@ -2,37 +2,21 @@ package level1;
 
 class SumMatrix {
 	int[][] sumMatrix(int[][] A, int[][] B) {
-		int[][] answer = {{0, 0}, {0, 0}};
-    int aX = A.length;
-    for( int i=0;i<aX;i++ ){
+		int[][] answer = new int[A.length][A[0].length];
+    for( int i=0;i<A.length;i++ ){
     	for(int j=0;j<A[i].length;j++ ) {
-        System.out.println( A[i][j] + B[i][j] );
-        System.out.println( A[i][j] + B[i][j] );
-        System.out.println( A[i][j] + B[i][j] );
-        System.out.println("A i" + i + ", j = " +j+ ", val" + A[i][j]);
-        System.out.println("B i" + i + ", j = " +j+ ", val" + B[i][j]);
         answer[i][j] = A[i][j] + B[i][j];
-        System.out.println("answer i" + i + ", j = " +j+ ", val" + answer[i][j]);
     	}
     }
-    
-    // Arrays.asList(answer).stream(i -> {
-    //   System.out.println( i );
-    // }) ;
-    
     return answer;
 	}
 
 	// 아래는 테스트로 출력해 보기 위한 코드입니다.
 	public static void main(String[] args) {
-    
 		SumMatrix c = new SumMatrix();
-		int[][] A = { { 1, 2 }, { 2, 3 } };
-		int[][] B = { { 3, 4 }, { 5, 6 } };
-    
-    System.out.println( A.length );
-    
-    
+		int[][] A = { { 1, 2 , 4}, { 2, 3 ,5} };
+		int[][] B = { { 3, 4 ,3 }, { 5, 6 ,4 } };
+
 		int[][] answer = c.sumMatrix(A, B);
 		if (answer[0][0] == 4 && answer[0][1] == 6 && 
 				answer[1][0] == 7 && answer[1][1] == 9) {

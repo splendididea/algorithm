@@ -12,7 +12,7 @@ class StringExercise{
     String getMiddle(String word){
         int strLength = word.length();
         System.out.println( strLength );
-        if( strLenght % 2 == 0 ) {
+        if( strLength % 2 == 0 ) {
             System.out.println( strLength );
         } else {
             System.out.println(strLength);
