@@ -38,6 +38,14 @@ public class HarshadNumber {
              for (String s : temp) {
                 sum += Integer.parseInt(s);
              }
+
+            4. 나누고 몫을 또 나눈다.
+             int a = num;
+             int b = 0;
+             while(a!=0){
+                 b+=a%10;
+                 a=a/10;
+             }
          *
          * */
 
@@ -45,12 +53,12 @@ public class HarshadNumber {
             numChars[i] = String.valueOf(num).charAt(i);
             sumNum += Integer.parseInt(  numChars[i].toString());
         }
-        return num % sumNum == 0 ? true : false;
+        return num % sumNum == 0;
     }
 
     // 아래는 테스트로 출력해 보기 위한 코드입니다.
     public static void  main(String[] args){
         HarshadNumber sn = new HarshadNumber();
-        System.out.println(sn.isHarshad(19));
+        System.out.println(sn.isHarshad(18));
     }
 }
