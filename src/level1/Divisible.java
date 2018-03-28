@@ -19,7 +19,7 @@ public class Divisible {
 //        int[] resssult = (int[]) Arrays.asList(numbers).stream().filter(ints -> ints%3 == 0).toArray();
         // 나의 풀이
         int[] result = Arrays.stream(numbers)
-                            .filter(t -> t%divisor == 0)
+                            .filter(t -> t % divisor == 0)
                             .sorted()
                             .toArray();
 

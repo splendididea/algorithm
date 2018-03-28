@@ -10,18 +10,15 @@ package level1;
 
 class StringExercise{
     String getMiddle(String word){
-        int strLength = word.length();
-        System.out.println( strLength );
-        if( strLenght % 2 == 0 ) {
-            System.out.println( strLength );
-        } else {
-            System.out.println(strLength);
-        }
-    	return "";    
+        int strLength = word.length() / 2;
+        int idx = word.length() % 2 == 0 ? word.length() / 2 - 1  : word.length() / 2 + 1;
+/*        System.out.println( word.substring(word.length() % 2 == 0 ? word.length() + 1 : word.length() ,
+                word.length() % 2 == 0 ? 1 : 2  ));*/
+    	return "";
     }
     // 아래는 테스트로 출력해 보기 위한 코드입니다.
     public static void  main(String[] args){
         StringExercise se = new StringExercise();
-        System.out.println(se.getMiddle("power"));
+        System.out.println(se.getMiddle("aoab"));
     }
 }
